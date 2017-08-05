@@ -55,4 +55,4 @@ def message_post_save(sender, instance, created, **kwargs):
             message = instance.text
         print(devices)
 
-        devices.send_message({'message': message}, to='/topics/noti')
+        devices.send_message({'message': message})
