@@ -1,0 +1,758 @@
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "bark";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.full-screen {
+    height: 100%;
+}
+
+section.invite {
+    text-align: center;
+    max-width: 480px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+section.invite h1 {
+    margin-top: 30px;
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+section.invite img.bark-friends {
+    width: 216px;
+    height: 216px;
+}
+
+section.invite .desc-container {
+    position: relative;
+    margin-top: 40px;
+}
+
+section.invite .desc-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 59px;
+    height: 59px;
+    z-index: 100;
+}
+
+section.invite .desc-container .desc {
+    padding-left: 75px;
+    text-align: left;
+    font-size: 8.25px;
+    font-size: 0.825rem;
+    font-weight: 200;
+}
+
+section.invite .desc-container .desc h3 {
+    padding-top: 8px;
+    margin: 8px 0;
+    font-weight: normal;
+}
+
+section.invite .desc-container .desc small {
+    display: block;
+    font-size: 0.9em;
+}
+
+section.invite .desc-container .desc .underline {
+    text-decoration: underline;
+}
+
+section.invite .desc-container .desc .review-link {
+    display: inline-block;
+    margin-top: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #E3CF57;
+    background-color: #fff;
+}
+
+section.invite .desc-container .bar {
+    position: absolute;
+    top: 0;
+    left: 29px;
+    width: 1px;
+    height: 200px;
+    background-color: white;
+    z-index: 0;
+}
+
+section.invite .desc-container .bar.shorter {
+    height: 150px;
+}
+
+section.invite .desc-container .bar.end {
+    background-color: #E3CF57;
+}
+
+section.invite footer {
+    height: 200px;
+}
+
+body {
+    font-family: 'Hanna', 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-size: 10px;
+    background-color: #E3CF57;
+    color: #8B5A00;
+}
+
+body section {
+    padding: 60px 90px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 550px) {
+    body section {
+        padding: 50px 20px;
+        text-align: center;
+    }
+}
+
+a:focus, input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
+}
+
+a, a:hover, a:visited, a:active {
+    color: #8B5A00;
+    text-decoration: none;
+}
+
+section.main h1.title {
+    margin-top: 50px;
+    position: relative;
+    z-index: 255;
+    display: inline-block;
+}
+
+section.main h1.title .big {
+    margin-left: -9px;
+    font-size: 60px;
+    font-size: 6rem;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 550px) {
+    section.main h1.title .big {
+        margin-left: 0;
+    }
+}
+
+section.main h1.title .sub {
+    margin-left: -3px;
+    font-size: 14.2px;
+    font-size: 1.42rem;
+    font-weight: 200;
+}
+
+@media only screen and (max-width: 550px) {
+    section.main h1.title .sub {
+        margin-left: 0;
+    }
+}
+
+section.main .fb-like {
+    z-index: 255;
+    height: 20px;
+}
+
+section.main .main-buttons {
+    display: inline-block;
+    position: relative;
+    z-index: 255;
+    margin-top: 230px;
+    text-align: left;
+    font-size: 13px;
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+@media only screen and (max-width: 550px) {
+    section.main .main-buttons {
+        margin-top: 160px;
+        text-align: left;
+        font-size: 10px;
+        font-size: 1rem;
+        font-weight: 200;
+    }
+}
+
+section.main .main-buttons a {
+    margin-bottom: 8px;
+    display: block;
+}
+
+section.main .main-buttons a span.circle {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+section.main .main-buttons a span.circle:hover {
+    background-color: #8B5A00;
+    color: #E3CF57;
+}
+
+section.main .main-buttons a span {
+    vertical-align: middle;
+}
+
+section.main .main-buttons a span.circle {
+    display: inline-block;
+    position: relative;
+    border: 1px solid #8B5A00;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 550px) {
+    section.main .main-buttons a span.circle {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+section.main .main-buttons a span.circle i {
+    position: absolute;
+    top: 8px;
+    left: 6px;
+}
+
+@media only screen and (max-width: 550px) {
+    section.main .main-buttons a span.circle i {
+        top: 6px;
+        left: 5px;
+    }
+}
+
+section.main .main-buttons a span.circle i.icon-bark {
+    top: 10px;
+    left: 9px;
+    font-size: 0.8em;
+}
+
+@media only screen and (max-width: 550px) {
+    section.main .main-buttons a span.circle i.icon-bark {
+        top: 8px;
+        left: 7px;
+    }
+}
+
+section.main .stats {
+    z-index: 255;
+    text-align: center;
+    font-size: 13px;
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+@media only screen and (max-width: 550px) {
+    section.main .stats {
+        position: static;
+        margin-top: 10px;
+        text-align: center;
+        font-size: 10px;
+        font-size: 1rem;
+        font-weight: 200;
+    }
+
+    section.main .stats br {
+        display: none;
+    }
+}
+
+section.main .stats .count {
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    -webkit-transition: opacity 200ms;
+    transition: opacity 200ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1000;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay .popup {
+    width: 390px;
+    margin: 150px auto;
+    padding: 40px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1010;
+    background: #fff;
+    color: #3b3d45;
+    text-align: left;
+    font-size: 11px;
+    font-size: 1.1rem;
+    font-weight: 200;
+}
+
+@media only screen and (max-width: 550px) {
+    .overlay .popup {
+        width: 86%;
+        padding: 5%;
+        font-size: 10px;
+        font-size: 1rem;
+        font-weight: 200;
+    }
+}
+
+.overlay .popup h3 {
+    margin-top: 0;
+    color: #E3CF57;
+    font-size: 13px;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.overlay .popup p {
+    margin: 30px 0 20px 0;
+}
+
+.overlay .popup .input-container {
+    height: 70px;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 550px) {
+    .overlay .popup .input-container {
+        height: 80px;
+    }
+}
+
+.overlay .popup .input-container input[type=text] {
+    padding: 8px 0;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #E3CF57;
+    font-size: 10px;
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.overlay .popup .input-container .thankyou {
+    display: none;
+    line-height: 1.5;
+    color: #E3CF57;
+    font-size: 10px;
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.overlay .popup .buttons {
+    text-align: right;
+}
+
+.overlay .popup .buttons .button {
+    background-color: #E3CF57;
+    border: none;
+    color: #fff;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 550px) {
+    .overlay .popup .buttons .button {
+        margin-bottom: 5px;
+        padding: 7px 10px;
+    }
+}
+
+.overlay .popup .buttons .button.cancel {
+    background-color: #9b9b9b;
+}
+
+section.intro {
+    text-align: center;
+}
+
+section.intro h2 {
+    margin-bottom: 0.3em;
+    font-size: 30px;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 550px) {
+    section.intro h2 {
+        font-size: 23px;
+        font-size: 2.3rem;
+        font-weight: 400;
+    }
+}
+
+section.intro p {
+    margin: 0;
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+@media only screen and (max-width: 550px) {
+    section.intro p {
+        font-size: 11px;
+        font-size: 1.1rem;
+        font-weight: 200;
+    }
+}
+
+section.intro img {
+    max-width: 80%;
+    height: auto;
+}
+
+section.intro img.intro-img {
+    width: 326px;
+    max-height: 289px;
+}
+
+section.intro img.app-img {
+    margin-top: 80px;
+    width: 600px;
+    max-height: 375px;
+    margin-bottom: -120px;
+}
+
+@media only screen and (max-width: 550px) {
+    section.intro img.app-img {
+        margin-bottom: -90px;
+    }
+}
+
+section.re-invented {
+    background-color: #fff;
+    color: #9b9b9b;
+}
+
+section.re-invented .container {
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+section.re-invented h2 {
+    margin-top: 70px;
+    margin-bottom: 60px;
+    font-size: 20px;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 550px) {
+    section.re-invented h2 {
+        font-size: 16px;
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+}
+
+section.re-invented p {
+    font-size: 12px;
+    font-size: 1.2rem;
+    font-weight: 200;
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 550px) {
+    section.re-invented p {
+        font-size: 10px;
+        font-size: 1rem;
+        font-weight: 200;
+    }
+}
+
+section.re-invented img {
+    width: 151px;
+    height: 52px;
+    margin: 30px 0;
+}
+
+section.screenshots {
+    text-align: center;
+}
+
+section.screenshots h2 {
+    margin: 30px 0 50px 0;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: 200;
+}
+
+@media only screen and (max-width: 550px) {
+    section.screenshots h2 {
+        font-size: 14px;
+        font-size: 1.4rem;
+        font-weight: 200;
+    }
+}
+
+section.screenshots h2.choose-your-dog {
+    margin-top: 100px;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: 200;
+}
+
+@media only screen and (max-width: 550px) {
+    section.screenshots h2.choose-your-dog {
+        margin: 60px 0 20px 0;
+        font-size: 11.8px;
+        font-size: 1.18rem;
+        font-weight: 200;
+    }
+}
+
+section.screenshots img {
+    height: auto;
+}
+
+section.screenshots img.radar {
+    max-width: 40%;
+    width: 183px;
+    max-height: 188px;
+}
+
+section.screenshots img.iphone {
+    max-width: 100%;
+    width: 662px;
+    max-height: 450px;
+}
+
+section.screenshots img.characters {
+    max-width: 100%;
+    width: 660px;
+    max-height: 145px;
+}
+
+footer {
+    padding: 40px 20px 20px 20px;
+    background-color: #333;
+    color: #E3CF57;
+    text-align: center;
+    font-size: 10px;
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+footer .buttons a {
+    color: #E3CF57 !important;
+    border: 1px solid #E3CF57;
+    border-radius: 8px;
+    padding: 10px 22px;
+    margin: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+footer .buttons a:hover {
+    background-color: #E3CF57;
+    color: #fff !important;
+}
+
+@media only screen and (max-width: 550px) {
+    footer .buttons a {
+        margin-bottom: 5px;
+        padding: 7px 10px;
+    }
+}
+
+footer .miscs {
+    margin: 50px 0;
+}
+
+footer .miscs a {
+    color: #9b9b9b;
+    display: inline-block;
+    margin: 0 8px;
+    font-size: 8px;
+    font-size: 0.8rem;
+    font-weight: 200;
+}
+
+footer p.copy {
+    color: #555;
+    font-size: 8px;
+    font-size: 0.8rem;
+    font-weight: 200;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "bark";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.my_wrapper {
+    width: 100%;
+    max-width: 1100px;
+    min-width: 440px;
+    margin: 0 auto;
+}
+
+.video_container {
+    position: relative;
+    padding-bottom: 52%;
+    padding-top: 30px;
+    height: 0;
+    width: 70%;
+    float: left;
+}
+
+.video_container iframe,
+.video_container object,
+.video_container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 360px;
+    border-color: black;
+}
+
+.feed_container {
+    width: 30%;
+    height: 364px;
+    overflow: hidden;
+    float: right;
+}
+
+.feed_container:hover, .feed_container:focus {
+    overflow-y: auto;
+}
+
+ol#feed_list {
+    margin: 0;
+    padding: 0;
+    background: #222;
+}
+
+ol#feed_list li {
+    list-style: none;
+}
+
+ol#feed_list li a {
+    text-decoration: none;
+    background-color: #222;
+    height: 55px;
+    display: block;
+    padding: 10px;
+}
+
+ol#feed_list li a:hover,
+ol#feed_list li.selected a {
+    background-color: #666666
+}
+
+.vid-thumb {
+    float: left;
+    margin-right: 8px;
+}
+
+.active-vid {
+    background: #3A3A3A;
+}
+
+#feed_list .desc {
+    color: #CACACA;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 550px) {
+    .my_wrapper {
+        width: 360px;
+    }
+
+    .video_container {
+        float: none;
+        width: 340px;
+        border: 0;
+        border-bottom: 2px solid #000;
+    }
+    
+    .feed_container {
+        float: none;
+        width: 344px;
+    }
+}
