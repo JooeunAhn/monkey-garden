@@ -12,6 +12,7 @@ class Message(models.Model):
     text = models.TextField(max_length=1000)
     url = models.URLField(blank=True)
     latlng = models.CharField(max_length=100, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     @property
     def lat(self):
@@ -46,3 +47,4 @@ def message_post_save(sender, instance, created, **kwargs):
 
         for user in users:
             MessageHistory.objects.create(user=user, message=instance)
+
