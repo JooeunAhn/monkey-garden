@@ -20,6 +20,8 @@ from django.contrib import admin
 
 from rest_framework import routers
 
+from root import views
+
 from accounts.views import FacebookLogin, UserDeviceViewSet
 
 router = routers.SimpleRouter()
@@ -27,6 +29,7 @@ router.register(r'device', UserDeviceViewSet)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', views.root, name="root"),
     url(r'api/v1/', include(router.urls)),
     url(r'^api/v1/rest-auth/', include('rest_auth.urls')),
     url(r'^api/v1/rest-auth/facebook/$', FacebookLogin.as_view(), name="fb_login"),

@@ -70,7 +70,9 @@ ROOT_URLCONF = 'monkey_garden.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            join(BASE_DIR, "monkey_garden", "templates")
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
