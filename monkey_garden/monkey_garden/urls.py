@@ -31,7 +31,9 @@ router.register(r'message', MessageViewSet)
 router.register(r'message_history', MessageHistoryViewSet),
 
 urlpatterns = [
+
     url(r'^admin/', admin.site.urls),
+    url(r'^accounts/', include('allauth.urls')),
     url(r'^$', root),
     url(r'^mypage/$', mypage, name="mypage"),
     url(r'api/v1/', include(router.urls)),

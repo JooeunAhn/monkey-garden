@@ -19,5 +19,5 @@ class MessageHistoryViewSet(viewsets.GenericViewSet, ListModelMixin):
 
     def get_queryset(self):
         user = self.request.user
-        mh = MessageHistory.objects.filter(user=user)
+        mh = MessageHistory.objects.filter(user=user).order_by("-created_at")
         return mh
