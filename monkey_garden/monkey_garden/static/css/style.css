@@ -764,6 +764,7 @@ ol#feed_list li.selected a {
 
     .feed_container {
         float: none;
+        margin-top: 100px;
         width: 344px;
     }
 }
