@@ -130,6 +130,7 @@ body {
 
 body section {
     padding: 60px 90px;
+    text-align: center;
 }
 
 @media only screen and (max-width: 550px) {
@@ -191,6 +192,7 @@ section.main .main-buttons {
     position: relative;
     z-index: 255;
     margin-top: 230px;
+    text-align: left;
     font-size: 13px;
     font-size: 1.3rem;
     font-weight: 200;
@@ -217,7 +219,7 @@ section.main .main-buttons a span.circle {
 }
 
 section.main .main-buttons a span.circle:hover {
-    background-color: #fff;
+    background-color: #8B5A00;
     color: #E3CF57;
 }
 
@@ -270,11 +272,8 @@ section.main .main-buttons a span.circle i.icon-bark {
 
 
 section.main .stats {
-    position: absolute;
-    top: 60px;
-    right: 90px;
     z-index: 255;
-    text-align: right;
+    text-align: center;
     font-size: 13px;
     font-size: 1.3rem;
     font-weight: 200;
