@@ -1,0 +1,130 @@
+
+{% load staticfiles%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MONKEY GARDEN</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MONKEY GARDEN">
+    <meta property="og:site_name" content="MONKEY GARDEN">
+    <meta property="og:description"
+          content="MONKEY GARDEN is a new location-based social network service to create fun and interactive near-distance social spaces for you wherever you are by imitating monkeys communication.">
+
+    <meta property="og:image" content="https://barkapp.co/assets/img/og-img.png">
+    <meta name="twitter:image:src" content="https://barkapp.co/assets/img/og-img.png">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css" rel="stylesheet"
+          type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,200" rel="stylesheet" type="text/css">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="{% static 'css/style.css'%} ">
+    <link rel="stylesheet" href="{% static 'js/layout.js'%}">
+</head>
+
+<body>
+
+<section class="main" id="main">
+    <h1 class="title">
+        <div class="sub">What does the monkey say</div>
+        <div class="big">Kkik!</div>
+    </h1>
+    <br>
+
+    <div id="stats" class="stats" style="margin-top: 100px;">
+        <span id="monkey-count" class="count">0</span> monkeys screamed<br>
+        <span id="scream-count" class="count">0</span> times
+    </div>
+
+    <br>
+
+    <div class="main-buttons">
+        <a href="#">
+                <span class="circle">
+                    <i class="fa fa-facebook" aria-hidden="true" style="position: relative; left: 12px;"></i>
+                </span>
+            <span>Facebook 로그인</span>
+        </a>
+    </div>
+    <br>
+
+
+</section>
+
+<section class="intro" id="intro">
+    <img src="../img/bark-intro.png" alt="Wordless-communication connecting people nearby"
+         class="intro-img">
+    <h2>Bark!</h2>
+    <p>Near-distance social spaces connecting people nearby</p>
+    <img src="../img/iphone-lean.png" alt="Bark mobile app" class="app-img">
+</section>
+
+<section class="re-invented">
+    <div class="container">
+        <h2>Bark - No One to Someone</h2>
+        <p>Bark redefines the way you make new friends nearby. It removes labels of age, gender, or social-identity, and
+            lets you become a dog in our playground.</p>
+        <p>All you have to do is simply push your bark to people nearby. When they hear your bark, they will bark back.
+            You don't need to wait for their comments or likes, or for someone to swipe so you can find a match. Just
+            simply Bark and connect instantly.</p>
+        <p>You can build relationships with other dogs (people) in our playground by barking to each other, or by
+            sending short messages. Through these simple and efficient methods, Bark can help you make connections and
+            introduce new friends to your life. From "no-one to someone", that's the first step of making friends.</p>
+        <p><strong>Join the new era of human communication - Bark!</strong></p>
+        <img src="../img/two-dogs-bark.png" alt="Dogs are barking together">
+    </div>
+</section>
+
+<section class="screenshots">
+    <img src="../img/bark-radar.png" alt="Bark at people nearby" class="radar">
+    <h2>Bark removes labels of age, gender, or social-identity,<br>and lets you become a dog in our playground.</h2>
+    <img src="../img/screenshots.png" alt="Bark screenshots" class="iphone">
+    <h2 class="choose-your-dog">Choose your own dog character.</h2>
+</section>
+
+<footer>
+    <p>Get the Bark app now!</p>
+    <div class="buttons">
+        <a href="https://itunes.apple.com/app/apple-store/id1100131438?pt=118117595&amp;ct=Bark%20Website&amp;mt=8"
+           class="ios-download-link" target="_blank"><span class="circle" style="margin-right: 10px"><i
+                class="fa fa-apple" aria-hidden="true"></i></span><span>App Store</span></a>
+        <a href="https://play.google.com/store/apps/details?id=com.bourbonshake.bark&amp;referrer=utm_source%3DBark%2520Website"
+           target="_blank" class="android-link"><span class="circle" style="margin-right: 10px"><i class="fa fa-android"
+                                                                                                   aria-hidden="true"></i></span><span>Play Store</span></a>
+    </div>
+    <div class="miscs">
+        <a href="mailto:sydneyitguy@gmail.com">Contact us</a>
+        <a href="/terms.html" target="_blank">Terms &amp; Condition</a>
+        <a href="/privacy.html" target="_blank">Privacy policy</a>
+        <a href="#main" class="smooth-scroll">Back to top</a>
+    </div>
+
+    <p class="copy">© 2016 BourbonShake. All rights reserved.</p>
+</footer>
+
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script id="facebook-jssdk"
+        src="//connect.facebook.net/en_GB/sdk.js#xfbml=1&amp;version=v2.6&amp;appId=314645451971263"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script>
+    var ua = navigator.userAgent.toLowerCase();
+    var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+    if (isAndroid) {
+        $('.android-link').attr('href', 'market://details?id=com.bourbonshake.bark&referrer=utm_source%3DBark%2520Website');
+    }
+
+    if (window.location.search.indexOf('iOS-Menu') != -1) {
+        $('.android-link').hide();
+    }
+</script>
+<script src="../js/layout.js"></script>
+
+</body>
+</html>

@@ -31,6 +31,7 @@ router.register(r'message_history', MessageHistoryViewSet),
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', views.root, name="root"),
     url(r'api/v1/', include(router.urls)),
     url(r'^api/v1/rest-auth/', include('rest_auth.urls')),
     url(r'^api/v1/rest-auth/facebook/$', FacebookLogin.as_view(), name="fb_login"),
