@@ -20,12 +20,14 @@ from django.contrib import admin
 
 from rest_framework import routers
 
-from root import views
-
-from accounts.views import FacebookLogin, UserDeviceViewSet
+from accounts.views import FacebookLogin, UserDeviceViewSet, UserViewSet
+from garden.views import MessageViewSet, MessageHistoryViewSet
 
 router = routers.SimpleRouter()
+router.register(r'user', UserViewSet)
 router.register(r'device', UserDeviceViewSet)
+router.register(r'message', MessageViewSet)
+router.register(r'message_history', MessageHistoryViewSet),
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),

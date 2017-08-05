@@ -53,6 +53,7 @@ INSTALLED_APPS = [
 
     # Local apps
     'accounts',
+    'garden',
 ]
 
 MIDDLEWARE = [
