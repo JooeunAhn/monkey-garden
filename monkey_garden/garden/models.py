@@ -50,4 +50,9 @@ def message_post_save(sender, instance, created, **kwargs):
         objs = [MessageHistory(user=user, message=instance) for user in users]
         devices = UserDevice.objects.filter(user__in=users)
         MessageHistory.objects.bulk_create(objs)
-        devices.send_message({'message': 'Kkik!'}, to='/topics/noti')
+        if instance.text == "":
+            message = "Kkik!!"
+        else:
+            message = instance.text
+
+        devices.send_message({'message': message}, to='/topics/noti')
