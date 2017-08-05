@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.contrib.auth import get_user_model
 from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
@@ -38,4 +39,12 @@ def message_post_save(sender, instance, created, **kwargs):
         profile = Profile.objects.get(user=user_pk)
         profile.last_latlng = instance.latlng
         profile.save()
-        # TODO MAKE HISTORY & PUSH
+        users = get_user_model().objects.exclude(pk=user_pk)
+        users = users.filter(profile__last_lat__gte=profile.last_lat-0.001)
+        users = users.filter(profile__last_lat__lte=profile.last_lat+0.001)
+        users = users.filter(profile__last_lng__gte=profile.last_lng-0.001)
+        users = users.filter(profile__last_lng__gte=profile.last_lng+0.001)
+
+        for user in users:
+            MessageHistory.objects.create(user=user, message=instance)
+
