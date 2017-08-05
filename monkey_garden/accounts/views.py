@@ -8,6 +8,9 @@ from rest_auth.registration.views import SocialLoginView
 from accounts.models import UserDevice
 from accounts.serializers import UserDeviceSerializer, UserSerializer
 
+sub = lambda val: float(val) - 0.001
+add = lambda val: float(val) + 0.001
+
 
 class FacebookLogin(SocialLoginView):
     adapter_class = FacebookOAuth2Adapter
@@ -23,10 +26,10 @@ class UserViewSet(viewsets.GenericViewSet, ListModelMixin):
         lng = profile.last_lng
         users = get_user_model().objects.exclude(last_latlng='')
         users = users.select_related('profile')
-        users = users.filter(profile__last_lat__gte=lat-0.001)
-        users = users.filter(profile__last_lat__lte=lat+0.001)
-        users = users.filter(profile__last_lng__gte=lng-0.001)
-        users = users.filter(profile__last_lng__lte=lng+0.001)
+        users = users.filter(profile__last_lat__gte=sub(lat))
+        users = users.filter(profile__last_lat__lte=add(lat))
+        users = users.filter(profile__last_lng__gte=sub(lng))
+        users = users.filter(profile__last_lng__lte=add(lng))
         return users
 
 

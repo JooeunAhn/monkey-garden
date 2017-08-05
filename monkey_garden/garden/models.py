@@ -6,25 +6,25 @@ from django.dispatch import receiver
 
 from accounts.models import Profile, UserDevice
 
+sub = lambda val: float(val) - 0.001
+add = lambda val: float(val) + 0.001
+
 
 class Message(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL)
     text = models.TextField(max_length=1000, blank=True)
-    url = models.URLField(blank=True)
+    url = models.CharField(max_length=100, blank=True)
     latlng = models.CharField(max_length=100, blank=True)
+    lat = models.FloatField(default=0)
+    lng = models.FloatField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
 
-    @property
-    def lat(self):
-        if self.latlng:
-            return self.latlng.split(',')[0]
-        return None
-
-    @property
-    def lng(self):
-        if self.latlng:
-            return self.latlng.split(',')[1]
-        return None
+    def save(self, *args, **kwargs):
+        if self.latlng != "":
+            latlng = self.latlng.split(',')
+            self.lat = latlng[0]
+            self.lng = latlng[1]
+        super(Message, self).save(*args, **kwargs)
 
 
 class MessageHistory(models.Model):
@@ -41,11 +41,10 @@ def message_post_save(sender, instance, created, **kwargs):
         profile.last_latlng = instance.latlng
         profile.save()
         users = get_user_model().objects.exclude(pk=user_pk)
-        users = users.select_related('profile')
-        users = users.filter(profile__last_lat__gte=profile.last_lat-0.001)
-        users = users.filter(profile__last_lat__lte=profile.last_lat+0.001)
-        users = users.filter(profile__last_lng__gte=profile.last_lng-0.001)
-        users = users.filter(profile__last_lng__gte=profile.last_lng+0.001)
+        users = users.filter(profile__last_lat__gte=sub(profile.last_lat))
+        users = users.filter(profile__last_lat__lte=add(profile.last_lat))
+        users = users.filter(profile__last_lng__gte=sub(profile.last_lng))
+        users = users.filter(profile__last_lng__lte=add(profile.last_lng))
 
         objs = [MessageHistory(user=user, message=instance) for user in users]
         devices = UserDevice.objects.filter(user__in=users)
@@ -54,5 +53,6 @@ def message_post_save(sender, instance, created, **kwargs):
             message = "Kkik!!"
         else:
             message = instance.text
+        print(devices)
 
         devices.send_message({'message': message}, to='/topics/noti')

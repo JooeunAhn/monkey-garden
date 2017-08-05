@@ -13,18 +13,15 @@ class UserDevice(AbstractDevice):
 class Profile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL)
     last_latlng = models.CharField(max_length=100, blank=True)
+    last_lat = models.FloatField(default=0)
+    last_lng = models.FloatField(default=0)
 
-    @property
-    def last_lat(self):
-        if self.latlng:
-            return self.latlng.split(',')[0]
-        return None
-
-    @property
-    def last_lng(self):
-        if self.latlng:
-            return self.latlng.split(',')[1]
-        return None
+    def save(self, *args, **kwargs):
+        if self.last_latlng != "":
+            latlng = self.last_latlng.split(',')
+            self.last_lat = latlng[0]
+            self.last_lng = latlng[1]
+        super(Profile, self).save(*args, **kwargs)
 
 
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
