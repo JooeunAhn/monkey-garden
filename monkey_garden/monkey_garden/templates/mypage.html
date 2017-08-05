@@ -1,5 +1,4 @@
-
-{% load staticfiles%}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,8 +24,8 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" href="{% static 'css/style.css'%} ">
-    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %} ">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
 </head>
 
 <body>
@@ -36,6 +35,7 @@
         <div class="big">History</div>
     </h1>
     <br><br><br>
+
 
 <iframe width="420" height="315"
 src="https://www.youtube.com/embed/z7d1fDUyuzQ">
@@ -51,28 +51,25 @@ src="https://www.youtube.com/embed/z7d1fDUyuzQ">
         <a href="/terms.html" target="_blank">Terms &amp; Condition</a>
         <a href="/privacy.html" target="_blank">Privacy policy</a>
         <a href="#main" class="smooth-scroll">Back to top</a>
+
     </div>
 
-    <p class="copy">© 2016 BourbonShake. All rights reserved.</p>
-</footer>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script id="facebook-jssdk"
+            src="//connect.facebook.net/en_GB/sdk.js#xfbml=1&amp;version=v2.6&amp;appId=314645451971263"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script>
+        var ua = navigator.userAgent.toLowerCase();
+        var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+        if (isAndroid) {
+            $('.android-link').attr('href', 'market://details?id=com.bourbonshake.bark&referrer=utm_source%3DBark%2520Website');
+        }
 
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<script id="facebook-jssdk"
-        src="//connect.facebook.net/en_GB/sdk.js#xfbml=1&amp;version=v2.6&amp;appId=314645451971263"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script>
-    var ua = navigator.userAgent.toLowerCase();
-    var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
-    if (isAndroid) {
-        $('.android-link').attr('href', 'market://details?id=com.bourbonshake.bark&referrer=utm_source%3DBark%2520Website');
-    }
-
-    if (window.location.search.indexOf('iOS-Menu') != -1) {
-        $('.android-link').hide();
-    }
-</script>
-<script src="{% static 'js/layout.js'%}"></script>
-
+        if (window.location.search.indexOf('iOS-Menu') != -1) {
+            $('.android-link').hide();
+        }
+    </script>
+</section>
 </body>
 </html>
 
