@@ -9,7 +9,7 @@ from accounts.models import Profile, UserDevice
 
 class Message(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL)
-    text = models.TextField(max_length=1000)
+    text = models.TextField(max_length=1000, blank=True)
     url = models.URLField(blank=True)
     latlng = models.CharField(max_length=100, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
