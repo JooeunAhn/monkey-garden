@@ -30,8 +30,8 @@ router.register(r'device', UserDeviceViewSet)
 router.register(r'message', MessageViewSet)
 router.register(r'message_history', MessageHistoryViewSet),
 
-urlpatterns = [
 
+urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^$', root),
