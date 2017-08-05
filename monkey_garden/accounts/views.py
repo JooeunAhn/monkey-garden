@@ -24,7 +24,7 @@ class UserViewSet(viewsets.GenericViewSet, ListModelMixin):
         profile = self.request.user.profile
         lat = profile.last_lat
         lng = profile.last_lng
-        users = get_user_model().objects.exclude(last_latlng='')
+        users = get_user_model().objects.exclude(profile__last_latlng='')
         users = users.select_related('profile')
         users = users.filter(profile__last_lat__gte=sub(lat))
         users = users.filter(profile__last_lat__lte=add(lat))
