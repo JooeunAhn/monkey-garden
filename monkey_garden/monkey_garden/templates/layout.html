@@ -26,7 +26,7 @@
     <![endif]-->
 
     <link rel="stylesheet" href="{% static 'css/style.css'%} ">
-    <link rel="stylesheet" href="{% static 'js/layout.js'%}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}">
 </head>
 
 <body>
@@ -59,11 +59,11 @@
 </section>
 
 <section class="intro" id="intro">
-    <img src="../img/bark-intro.png" alt="Wordless-communication connecting people nearby"
+    <img src="{% static 'img/bark-intro.png'%}" alt="Wordless-communication connecting people nearby"
          class="intro-img">
     <h2>Bark!</h2>
     <p>Near-distance social spaces connecting people nearby</p>
-    <img src="../img/iphone-lean.png" alt="Bark mobile app" class="app-img">
+    <img src="{% static 'img/iphone-lean.png' %}" alt="Bark mobile app" class="app-img">
 </section>
 
 <section class="re-invented">
@@ -78,14 +78,14 @@
             sending short messages. Through these simple and efficient methods, Bark can help you make connections and
             introduce new friends to your life. From "no-one to someone", that's the first step of making friends.</p>
         <p><strong>Join the new era of human communication - Bark!</strong></p>
-        <img src="../img/two-dogs-bark.png" alt="Dogs are barking together">
+        <img src="{% static 'img/two-dogs-bark.png' %}" alt="Dogs are barking together">
     </div>
 </section>
 
 <section class="screenshots">
-    <img src="../img/bark-radar.png" alt="Bark at people nearby" class="radar">
+    <img src="{% static 'img/bark-radar.png' %}" alt="Bark at people nearby" class="radar">
     <h2>Bark removes labels of age, gender, or social-identity,<br>and lets you become a dog in our playground.</h2>
-    <img src="../img/screenshots.png" alt="Bark screenshots" class="iphone">
+    <img src="{% static 'img/screenshots.png' %}" alt="Bark screenshots" class="iphone">
     <h2 class="choose-your-dog">Choose your own dog character.</h2>
 </section>
 
@@ -124,7 +124,7 @@
         $('.android-link').hide();
     }
 </script>
-<script src="../js/layout.js"></script>
+<script src="{% static 'js/layout.js'%}"></script>
 
 </body>
 </html>

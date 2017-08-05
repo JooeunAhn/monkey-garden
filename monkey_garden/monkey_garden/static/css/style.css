@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
     font-family: "bark";
@@ -122,7 +123,7 @@ section.invite footer {
 }
 
 body {
-    font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Hanna', 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
     font-size: 10px;
     background-color: #E3CF57;
     color: #8B5A00;
@@ -150,7 +151,7 @@ a, a:hover, a:visited, a:active {
 }
 
 section.main h1.title {
-    margin: 0;
+    margin-top: 50px;
     position: relative;
     z-index: 255;
     display: inline-block;
