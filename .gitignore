@@ -9,7 +9,6 @@ local_settings.py
 db.sqlite3
 
 collected_static
-static
 =======
 media
 
