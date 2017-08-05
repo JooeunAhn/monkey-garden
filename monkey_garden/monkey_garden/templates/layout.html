@@ -38,15 +38,16 @@
         <div class="big">Kkik!</div>
     </h1>
     <br>
-<img src="{% static 'img/monkey1.png'%}" alt="Wordless-communication connecting people nearby"class="intro-img">
+    <img src="{% static 'img/monkey1.png'%}" alt="Wordless-communication connecting people nearby"class="intro-img">
     <div id="stats" class="stats" style="margin-top: 100px;"><br>
         <span id="monkey-count" class="count">0</span> monkeys screamed<br>
         <span id="scream-count" class="count">0</span> times
+        <br>
+        <br>
         <p>
-                <a href="{% provider_login_url "facebook" method="js_sdk" %}">
-                
-            <span>Facebook 로그인</span>
-        </a>
+            <a href="{% provider_login_url "facebook" method="js_sdk" %}">
+                <span style="border: solid 1px #8B5A00; padding: 10px; border-radius: 20px">Facebook 로그인</span>
+            </a>
         </p>
     </div><br><br><br><br><br><br><br><br><br>
 
