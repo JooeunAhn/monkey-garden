@@ -16,4 +16,4 @@ class MessageHistorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = MessageHistory
-        fields = ('message')
+        fields = ('message',)
