@@ -8,6 +8,7 @@ def root(request):
 
 
 def mypage(request):
-    message_histories = MessageHistory.objects.filter(user=request.user).order_by("-craeted_at")
+    message_histories = MessageHistory.objects.exclude(url="")
+    message_histories = message_histories.filter(user=request.user).order_by("-craeted_at")
     return render(request, 'mypage.html',
-               {"message_histories": message_histories})
+        {"message_histories": message_histories})
