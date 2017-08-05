@@ -24,7 +24,7 @@ BASE_DIR = dirname(dirname(dirname(abspath(__file__))))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = load_credential('SECRET_KEY')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
