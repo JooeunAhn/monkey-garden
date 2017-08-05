@@ -1,5 +1,4 @@
-
-{% load staticfiles%}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,8 +24,8 @@
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" href="{% static 'css/style.css'%} ">
-    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %} ">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
 </head>
 
 <body>
@@ -37,46 +36,84 @@
     </h1>
     <br><br><br>
 
-<iframe width="420" height="315"
-src="https://www.youtube.com/embed/z7d1fDUyuzQ">
-</iframe>
+    <div class="my_wrapper">
+        <div class="video_container">
+            <iframe width="420" height="315"
+                    src="https://www.youtube.com/embed/z7d1fDUyuzQ">
+            </iframe>
+        </div>
 
+        <div class="feed_container">
+            <ol id="feed_list">
+              <li class="selected">
+                <a href="#" onClick="document.getElementById('vid_frame').src='https://youtube.com/embed/cOSEOYi9JS4?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                  <span class="vid-thumb"><img width=72 src="https://img.youtube.com/vi/cOSEOYi9JS4/default.jpg" /></span>
+                  <div class="desc">WeatherBeater™ Product Video</div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='https://youtube.com/embed/9P7mEf4bilg?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                  <span class="vid-thumb"><img width=72 src="https://img.youtube.com/vi/9P7mEf4bilg/default.jpg" /></span>
+                  <div class="desc">X-act Contour® Product Video</div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='https://youtube.com/embed/KHxNpXovl58?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                  <span class="vid-thumb"><img width=72 src="https://img.youtube.com/vi/KHxNpXovl58/default.jpg" /></span>
+                  <div class="desc">GearBox® Product Video</div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='https://youtube.com/embed/D_a2UBGsePQ?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                  <span class="vid-thumb"><img width=72 src="https://img.youtube.com/vi/D_a2UBGsePQ/default.jpg" /></span>
+                  <div class="desc">Mud Guards Product Video</div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='https://youtube.com/embed/vYoh2IgoBXg?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                  <span class="vid-thumb"><img width=72 src="https://img.youtube.com/vi/vYoh2IgoBXg/default.jpg" /></span>
+                  <div class="desc">Wheel Well Guards Product Video</div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='https://youtube.com/embed/RTHI_uGyfTM?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                  <span class="vid-thumb"><img width=72 src="https://img.youtube.com/vi/RTHI_uGyfTM/default.jpg" /></span>
+                  <div class="desc">Cargo Liner Product Video</div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='https://youtube.com/embed/EvTjAjLNphE?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                  <span class="vid-thumb"><img width=72 src="https://img.youtube.com/vi/EvTjAjLNphE/default.jpg" /></span>
+                  <div class="desc">Husky Liners Products</div>
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void();" onClick="document.getElementById('vid_frame').src='https://youtube.com/embed/-Qpc79oaJQg?autoplay=1&rel=0&showinfo=0&autohide=1'">
+                  <span class="vid-thumb"><img width=72 src="https://img.youtube.com/vi/-Qpc79oaJQg/default.jpg" /></span>
+                  <div class="desc">Custom Molded Mud Guards</div>
+                </a>
+              </li>
 
-    <div id="stats" class="stats" style="margin-top: 100px;">
-        <span id="monkey-count" class="count">0</span> monkeys screamed<br>
-        <span id="scream-count" class="count">0</span> times
+            </ol>
+        </div>
     </div>
 
-    <br>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script id="facebook-jssdk"
+            src="//connect.facebook.net/en_GB/sdk.js#xfbml=1&amp;version=v2.6&amp;appId=314645451971263"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script>
+        var ua = navigator.userAgent.toLowerCase();
+        var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+        if (isAndroid) {
+            $('.android-link').attr('href', 'market://details?id=com.bourbonshake.bark&referrer=utm_source%3DBark%2520Website');
+        }
 
-
-    <div class="miscs">
-        <a href="mailto:sydneyitguy@gmail.com">Contact us</a>
-        <a href="/terms.html" target="_blank">Terms &amp; Condition</a>
-        <a href="/privacy.html" target="_blank">Privacy policy</a>
-        <a href="#main" class="smooth-scroll">Back to top</a>
-    </div>
-
-    <p class="copy">© 2016 BourbonShake. All rights reserved.</p>
-</footer>
-
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
-<script id="facebook-jssdk"
-        src="//connect.facebook.net/en_GB/sdk.js#xfbml=1&amp;version=v2.6&amp;appId=314645451971263"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script>
-    var ua = navigator.userAgent.toLowerCase();
-    var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
-    if (isAndroid) {
-        $('.android-link').attr('href', 'market://details?id=com.bourbonshake.bark&referrer=utm_source%3DBark%2520Website');
-    }
-
-    if (window.location.search.indexOf('iOS-Menu') != -1) {
-        $('.android-link').hide();
-    }
-</script>
-<script src="{% static 'js/layout.js'%}"></script>
-
+        if (window.location.search.indexOf('iOS-Menu') != -1) {
+            $('.android-link').hide();
+        }
+    </script>
+</section>
 </body>
 </html>
 
