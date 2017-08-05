@@ -1,15 +1,13 @@
 from django.shortcuts import render
 
+from garden.models import MessageHistory
 
-# https://www.youtube.com/watch?v=zZ4n0fI23_g
-# www.youtube.com/embed/z7d1fDUyuzQ
 
-def embed(input):
-	pass
-	
-# Create your views here.
 def root(request):
-	return render(request, 'layout.html', {})
+    return render(request, 'layout.html', {})
+
 
 def mypage(request):
-	return render(request, 'mypage.html', {})
+    message_histories = MessageHistory.objects.filter(user=request.user).order_by("-craeted_at")
+    return render(request, 'mypage.html',
+               {"message_histories": message_histories})
